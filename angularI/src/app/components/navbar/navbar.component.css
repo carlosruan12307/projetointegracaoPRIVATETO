@@ -9,6 +9,9 @@
   transition: transform 5s ease-in-out;
   cursor: pointer;
 }
+.logout{
+  cursor: pointer;
+}
 @keyframes logor {
   0% {
     transform: rotateY(0deg);
