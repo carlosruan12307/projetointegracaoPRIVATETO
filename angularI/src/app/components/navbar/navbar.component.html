@@ -96,7 +96,7 @@
       <div>{{ userData?.email }}</div>
       <div>{{ userData?.roles }}</div>
 
-      <a [routerLink]="['/']">exit</a>
+      <a (click)="logout()" >exit</a>
     </div>
   </div>
 </div>

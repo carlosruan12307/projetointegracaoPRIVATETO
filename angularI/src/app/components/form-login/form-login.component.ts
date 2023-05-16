@@ -23,24 +23,23 @@ export class FormLoginComponent implements OnInit {
     });
   }
   submit() {
-    // console.log(this.formGroup.get('email')?.value);
-    // this.service.login(this.formGroup).subscribe({
-    //   next: (userData) => {
-    //     if (userData != null) {
-    //       this.service.LoggedIn = true;
-    //       this.service.userData = userData;
-    //       this.error = '';
-    //       this.router.navigate(['/home']);
-    //     }
-    //   },
-    //   error: (error) => {
-    //     this.error = 'login ou senha invalida';
-    //     console.log('deu erro barao, tai o erro pra tu: ' + error.message);
-    //     console.log(error);
-    //   },
-    // });
-    this.service.LoggedIn = true;
-    this.router.navigate(['/movies']);
+    console.log(this.formGroup.get('email')?.value);
+    this.service.login(this.formGroup).subscribe({
+      next: (userData) => {
+        if (userData != null) {
+          this.service.LoggedIn = true;
+          this.service.userData = userData;
+          this.error = '';
+          this.router.navigate(['/movies']);
+        }
+      },
+      error: (error) => {
+        this.error = 'login ou senha invalida';
+        console.log('deu erro barao, tai o erro pra tu: ' + error.message);
+        console.log(error);
+      },
+    });
+
   }
 
   get email() {

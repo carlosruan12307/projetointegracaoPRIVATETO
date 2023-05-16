@@ -70,7 +70,7 @@ export class GoogleloginComponent implements AfterViewInit, OnInit {
         this.service.LoggedIn = true;
         this.service.userData = userData;
         this.ngzone.run(() => {
-          this.route.navigate(['/home']);
+          this.route.navigate(['/movies']);
         });
       },
       error: (error) => {

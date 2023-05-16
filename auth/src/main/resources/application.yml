@@ -2,15 +2,15 @@
 server:
   port: 8080
 jwt:
-  secretKey: ""
+  secretKey: jxgEQeXHuPq8VdbyYFNkANdudQ53YUn4
 google:
-  clientId: ""
+  clientId: 336886880384-33mjig685qfsgvaivcbqkro60n6749k6.apps.googleusercontent.com
 spring:
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/projeto
     username: root
-    password: ""
+    password: password
   jpa:
     hibernate.ddl-auto: update
     generate-ddl: true
