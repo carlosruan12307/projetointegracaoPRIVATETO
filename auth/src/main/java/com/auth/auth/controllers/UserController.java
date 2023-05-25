@@ -11,15 +11,17 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 
 import org.springframework.web.bind.annotation.GetMapping;
-
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.WebUtils;
 
 import com.auth.auth.DTOs.EmailModel;
 import com.auth.auth.DTOs.JwtClaimsModel;
-
+import com.auth.auth.models.UserModel;
 import com.auth.auth.responses.UserResponse;
 import com.auth.auth.services.JWTService;
+import com.auth.auth.services.UserService;
 
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
@@ -33,10 +35,18 @@ public class UserController {
     RabbitTemplate rabbitTemplate;
     @Autowired
     JWTService jwtService;
+    @Autowired
+    UserService userService;
 
     @GetMapping("/")
     public ResponseEntity<String> inicio() {
         return ResponseEntity.ok("bem vindo a api");
+    }
+    @PostMapping("/cadastrarUsuario")
+    public String cadastrarUsuario(@RequestBody UserModel userModel){
+        System.out.println(userModel);
+        userService.cadastrarUsuario(userModel);
+        return "deu certo";
     }
 
     @GetMapping("/getValuesJWT")

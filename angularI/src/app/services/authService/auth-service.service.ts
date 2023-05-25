@@ -15,8 +15,12 @@ export class AuthService {
 
   constructor(private http: HttpClient) {}
 
-  cadastrar(user: UserForm) {
-    this.http.post('', user);
+  cadastrar(user: FormGroup) : Observable<any> {
+  return this.http.post(this.apiURL + "/cadastrarUsuario",{
+    name: user.get("name"),
+    password: user.get("password"),
+    email: user.get("email")
+  });
   }
 
   logout(): Observable<any> {

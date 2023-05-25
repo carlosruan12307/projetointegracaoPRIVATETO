@@ -10,7 +10,7 @@ spring:
     driverClassName: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/projeto
     username: root
-    password: password
+    password: 123456
   jpa:
     hibernate.ddl-auto: update
     generate-ddl: true
@@ -18,6 +18,6 @@ spring:
     database-platform: org.hibernate.dialect.MySQLDialect
   rabbitmq:
     host: localhost #localhost
-    port: 5672
-    username: guest #guest
-    password: guest #guest
+    port: 60000
+    username: rabbitmq #guest
+    password: rabbitmq #guest

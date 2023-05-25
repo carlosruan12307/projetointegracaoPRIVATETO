@@ -20,29 +20,18 @@ export class FormSignUpComponent implements OnInit {
     this.formGroup = new FormGroup({
       email: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl('', Validators.required),
-      phone: new FormControl('', [Validators.required]),
       name: new FormControl('', [Validators.required]),
     });
   }
   submit() {
-    // console.log(this.formGroup.get('email')?.value);
-    // this.service.login(this.formGroup).subscribe({
-    //   next: (userData) => {
-    //     if (userData != null) {
-    //       this.service.LoggedIn = true;
-    //       this.service.userData = userData;
-    //       this.error = '';
-    //       this.router.navigate(['/home']);
-    //     }
-    //   },
-    //   error: (error) => {
-    //     this.error = 'login ou senha invalida';
-    //     console.log('deu erro barao, tai o erro pra tu: ' + error.message);
-    //     console.log(error);
-    //   },
-    // });
-    this.service.LoggedIn = true;
-    this.router.navigate(['/movies']);
+    this.service.cadastrar(this.formGroup).subscribe({
+      next: response => {
+        console.log(response)
+      },
+      error: error => {
+        console.log(error)
+      }
+    })
   }
 
   get email() {
@@ -56,7 +45,5 @@ export class FormSignUpComponent implements OnInit {
   get name() {
     return this.formGroup.get('name');
   }
-  get phone() {
-    return this.formGroup.get('phone');
-  }
+
 }

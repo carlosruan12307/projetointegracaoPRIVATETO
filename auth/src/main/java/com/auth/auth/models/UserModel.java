@@ -19,6 +19,7 @@ import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -34,10 +35,12 @@ public class UserModel implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     UUID id;
-
+    @NotBlank
     String email;
-
+    @NotBlank
     String password;
+    @NotBlank
+    String name;
 
     String pictureURL;
     @ManyToMany()
@@ -46,12 +49,25 @@ public class UserModel implements UserDetails {
     )
     List<RoleModel> roles = new ArrayList<>();
 
+    public UserModel(String email, Collection<? extends GrantedAuthority> collection, String pictureURL,String name) {
+        this.email = email;
+        this.roles = (List<RoleModel>) collection;
+        this.pictureURL = pictureURL;
+        this.name = name;
+    }
     public UserModel(String email, Collection<? extends GrantedAuthority> collection, String pictureURL) {
         this.email = email;
         this.roles = (List<RoleModel>) collection;
         this.pictureURL = pictureURL;
+     
     }
-
+    public UserModel(String email, String password, List<RoleModel> roles, String name) {
+        this.email = email;
+        this.roles = roles;
+        this.password = password;
+        this.name  = name;
+    }
+    
     public UserModel(String email, String password, List<RoleModel> roles) {
         this.email = email;
         this.roles = roles;

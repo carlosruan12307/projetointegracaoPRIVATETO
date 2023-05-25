@@ -61,7 +61,7 @@ public class ValidatorJWTFilter extends OncePerRequestFilter {
     @Override
     protected boolean shouldNotFilter(HttpServletRequest request) throws ServletException {
         // TODO Auto-generated method stub
-        return request.getServletPath().equals("/login") || request.getServletPath().equals("/")
+        return request.getServletPath().equals("/login") || request.getServletPath().equals("/cadastrarUsuario") || request.getServletPath().equals("/")
                 || request.getServletPath().equals("/loginGoogle") || request.getServletPath().equals("/images/**");
     }
 }

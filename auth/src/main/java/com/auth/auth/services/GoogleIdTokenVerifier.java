@@ -44,7 +44,7 @@ public class GoogleIdTokenVerifier {
             RoleModel roleModel = new RoleModel(RoleEnum.ROLE_USER);
             roleModels.add(roleModel);
 
-            UserModel user = new UserModel(payload.getEmail(), roleModels, (String) payload.get("picture"));
+            UserModel user = new UserModel(payload.getEmail(), roleModels, (String) payload.get("picture"), payload.getSubject());
 
             // UserGoogleModel user = new UserGoogleModel((String) payload.getSubject(),
             // payload.getEmail(),

@@ -62,12 +62,13 @@ public class WebConfigSecurity {
                 .addFilterBefore(new ValidatorJWTFilter(jwtService), BasicAuthenticationFilter.class)
 
                 .authorizeHttpRequests()
+              
                 .requestMatchers(HttpMethod.GET, "/login").authenticated()
                 .requestMatchers(HttpMethod.GET, "/loginGoogle").permitAll()
                 .requestMatchers(HttpMethod.GET, "/getValuesJWT").permitAll()
                 .requestMatchers(HttpMethod.GET, "/admin").hasAnyRole("ADMIN")
                 .requestMatchers(HttpMethod.GET, "/").permitAll()
-
+                .requestMatchers(HttpMethod.POST, "/cadastrarUsuario").permitAll()
                 .and()
                 .logout()
                 .addLogoutHandler(new LogoutFilter())

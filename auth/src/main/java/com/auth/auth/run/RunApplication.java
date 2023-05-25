@@ -34,10 +34,10 @@ public class RunApplication implements ApplicationRunner {
             RoleModel role1 = new RoleModel(RoleEnum.ROLE_USER);
             rr.save(role1); 
             
-            UserModel user = new UserModel( "carlosruanaraujo789@gmail.com", passwordEncoder.encode("123"), Collections.singletonList(role));
+            UserModel user = new UserModel( "carlosruanaraujo789@gmail.com", passwordEncoder.encode("123"), Collections.singletonList(role),"carlos");
             ur.save(user);
 
-            UserModel user1 = new UserModel( "matheus", passwordEncoder.encode("1234"), Collections.singletonList(role1));
+            UserModel user1 = new UserModel( "matheus", passwordEncoder.encode("1234"), Collections.singletonList(role1), "matheus");
             ur.save(user1);
         }
         

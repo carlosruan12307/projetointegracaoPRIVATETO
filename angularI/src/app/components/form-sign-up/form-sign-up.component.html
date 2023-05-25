@@ -41,20 +41,8 @@
     nome precisa existir
   </h5>
 
-  <div class="form-floating m-3">
-    <input
-      formControlName="phone"
-      class="form-control"
-      placeholder="phone"
-      id="phone"
-      type="number"
-    />
-    <label for="#phone">Phone Number</label>
-  </div>
-  <h5 *ngIf="this.phone?.errors?.['required']" class="text-danger ms-3">
-    telefone precisa existir
-  </h5>
 
-  <button (click)="submit()" class="btn-login btn m-3">Entrar</button>
+
+  <button (click)="submit()" class="btn-login btn m-3">Cadastrar</button>
   <h5 class="m-3"><a [routerLink]="['/']">Ja tenho uma conta</a></h5>
 </form>

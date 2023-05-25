@@ -1,4 +1,4 @@
 export const environment = {
   urlBack: 'http://localhost:8080',
-  apiKEY_moviedb: 'b35f864abaff3611f685685dacd963df',
+  apiKEY_moviedb: 'e035368dd882811622d9ab2c14363007',
 };
