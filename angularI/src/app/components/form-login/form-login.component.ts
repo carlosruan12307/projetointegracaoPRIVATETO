@@ -23,7 +23,7 @@ export class FormLoginComponent implements OnInit {
     });
   }
   submit() {
-    console.log(this.formGroup.get('email')?.value);
+    /* console.log(this.formGroup.get('email')?.value);
     this.service.login(this.formGroup).subscribe({
       next: (userData) => {
         if (userData != null) {
@@ -38,7 +38,10 @@ export class FormLoginComponent implements OnInit {
         console.log('deu erro barao, tai o erro pra tu: ' + error.message);
         console.log(error);
       },
-    });
+    }); */
+
+    this.service.LoggedIn = true;
+    this.router.navigate(['/movies']);
 
   }
 

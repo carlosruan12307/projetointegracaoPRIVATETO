@@ -1,3 +1,4 @@
+<link href="https://fonts.googleapis.com/css?family=Muli:400,700" rel="stylesheet">
 <div
   class="container-movies d-flex flex-wrap justify-content-center align-items-center"
 >
@@ -43,17 +44,17 @@
               class="d-block img-poster h-100"
             />
             <div
-              class="m-5 container-modal-conteudo d-flex flex-column flex-wrap border border-danger align-items-center"
+              class="m-5 container-modal-conteudo d-flex flex-column flex-wrap align-items-center"
             >
               <h1>{{ movie.title }}</h1>
               <div
                 class="container-details d-flex flex-wrap align-items-center justify-content-center"
               >
-                <p class="m-5">{{ movie.release_date }}</p>
-                <p class="m-5">{{ movie.original_language }}</p>
-                <p class="m-5">{{ movie.vote_average }}</p>
+                <p class="m-3">Data de Lançamento: {{ movie.release_date }}</p>
+                <p class="m-3" >Idioma: {{ movie.original_language }}</p>
+                <p class="m-3">Nota Média: {{ movie.vote_average }}</p>
               </div>
-              <p class="border border-primary">{{ movie.overview }}</p>
+              <p class="container-desc"> Descrição: {{ movie.overview }}</p>
             </div>
 
             <button

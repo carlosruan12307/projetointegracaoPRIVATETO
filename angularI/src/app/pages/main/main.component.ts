@@ -42,14 +42,14 @@ export class MainComponent implements OnInit {
           console.log('saca so', this.router.url);
           console.log(e);
 
-          this.moviesCard = e.splice(0, 3);
+          this.moviesCard = e.splice(0, 5);
           this.movies = e;
         });
     } else if (this.router.url == '/series') {
       this.serviceMovies.getMovies(typeEnum.tv, 'pt-br', 3).subscribe((e) => {
         console.log('saca so', this.router.url);
         console.log(e);
-        this.moviesCard = e.splice(0, 3);
+        this.moviesCard = e.splice(0, 5);
         this.movies = e;
       });
     }
