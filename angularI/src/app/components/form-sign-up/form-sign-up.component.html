@@ -1,5 +1,5 @@
 <form [formGroup]="formGroup" #formDir="ngForm" class="">
-  <h1 class="align-self-center">CADASTRO</h1>
+  <h1 class="align-self-center">Cadastro</h1>
   <div class="form-floating m-3">
     <input
       formControlName="email"
@@ -11,7 +11,7 @@
     <label for="#email">Email</label>
   </div>
   <h5 *ngIf="this.email?.errors?.['required']" class="text-danger ms-3">
-    email precisa existir
+    Email precisa existir
   </h5>
   <div class="form-floating m-3">
     <input
@@ -21,10 +21,10 @@
       id="password"
       type="password"
     />
-    <label for="#password">Password</label>
+    <label for="#password">Senha</label>
   </div>
   <h5 *ngIf="this.password?.errors?.['required']" class="text-danger ms-3">
-    senha precisa existir
+    Senha precisa existir
   </h5>
 
   <div class="form-floating m-3">
@@ -35,14 +35,14 @@
       id="name"
       type="text"
     />
-    <label for="#name">Name</label>
+    <label for="#name">Nome</label>
   </div>
   <h5 *ngIf="this.name?.errors?.['required']" class="text-danger ms-3">
-    nome precisa existir
+    Nome precisa existir
   </h5>
 
 
 
   <button (click)="submit()" class="btn-login btn m-3">Cadastrar</button>
-  <h5 class="m-3"><a [routerLink]="['/']">Ja tenho uma conta</a></h5>
+  <h5 class="m-3"><a [routerLink]="['/']">Já tenho uma conta</a></h5>
 </form>

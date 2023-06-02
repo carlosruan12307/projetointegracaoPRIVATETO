@@ -1,7 +1,7 @@
 .container-pagelogin {
   display: flex;
   /* border: 5px solid red; */
-  height: 100%;
+  height: 10  0%;
 }
 .btn-login {
   color: white;
@@ -11,7 +11,8 @@
   background-color: #0c80a3;
 }
 .container-imagem {
-  width: 50%;
+  width: 70%;
+  display: flex;
   /* border: 5px solid blue; */
   background-color: #0c9fcc;
 }
@@ -20,11 +21,11 @@
   flex-direction: column;
 }
 .container-form {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-
-  /* border: 5px solid yellow; */
+  width: 30%;
+  height: 100%;
+  justify-content: flex-start;
+  font-family: 'Muli';
+  /*border: 5px solid yellow;*/
 }
 .container-check-forgot {
   display: flex;
@@ -44,12 +45,12 @@
 .form {
   /* border: 5px solid green; */
 
-  box-shadow: 0px 10px 10px 5px #0c9fcc;
+  /*box-shadow: 0px 10px 10px 5px #0c9fcc;*/
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
 
-  width: 50%;
+  width: 100%;
 }
 @media screen and (max-width: 992px) {
   .form {
