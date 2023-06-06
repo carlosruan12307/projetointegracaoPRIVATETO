@@ -10,8 +10,7 @@
     />
     <label for="#email">Email</label>
   </div>
-  <h5 *ngIf="this.email?.errors?.['required']" class="text-danger ms-3">
-    Email precisa existir
+  <h5 *ngIf="this.email?.errors?.['required']" class="text-danger ms-5">
   </h5>
   <div class="form-floating m-3">
     <input
@@ -23,15 +22,14 @@
     />
     <label for="#password">Senha</label>
   </div>
-  <h5 *ngIf="this.password?.errors?.['required']" class="text-danger ms-3">
-    Senha precisa existir
+  <h5 *ngIf="this.password?.errors?.['required']" class="text-danger ms-5">
   </h5>
   <div class="container-check-forgot">
-    <div class="form-check m-3">
+    <div class="form-check m-5">
       <label class="form-check-label">Lembrar do login</label>
       <input class="form-check-input" type="checkbox" />
     </div>
-    <a routerLink="['']" class="me-3 mt-3 mb-3 forgot">Esqueceu sua senha?</a>
+    <a routerLink="['']" class="me-5 mt-5 mb-5 forgot">Esqueceu sua senha?</a>
   </div>
   <div class="mt-3 ms-3 text-danger">{{ error }}</div>
   <button (click)="submit()" class="btn-login btn m-3">Entrar</button>

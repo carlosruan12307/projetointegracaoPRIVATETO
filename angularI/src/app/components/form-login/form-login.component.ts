@@ -38,7 +38,7 @@ export class FormLoginComponent implements OnInit {
         console.log('deu erro barao, tai o erro pra tu: ' + error.message);
         console.log(error);
       },
-    }); */
+    });*/
 
     this.service.LoggedIn = true;
     this.router.navigate(['/movies']);

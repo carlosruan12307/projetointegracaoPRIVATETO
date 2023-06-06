@@ -92,9 +92,9 @@
     ></button>
   </div>
   <div class="offcanvas-body">
-    <div class="d-flex flex-column border border-danger align-items-center">
-      <div>{{ userData?.email }}</div>
-      <div>{{ userData?.roles }}</div>
+    <div class="d-flex flex-column border align-items-center">
+      <div>Email: {{ userData?.email }}</div>
+      <div>Role: {{ userData?.roles }}</div>
 
       <a class="logout" (click)="logout()" >exit</a>
     </div>
